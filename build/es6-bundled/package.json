@@ -1,0 +1,17 @@
+{
+  "name": "draw",
+  "description": "this draw app",
+  "dependencies": {
+    "@polymer/iron-icons": "^3.0.0-pre.19",
+    "@polymer/paper-button": "^3.0.0-pre.19",
+    "@polymer/paper-dialog": "^3.0.0-pre.19",
+    "@polymer/paper-fab": "^3.0.0-pre.19",
+    "@polymer/paper-swatch-picker": "^3.0.0-pre.19",
+    "@polymer/polymer": "^3.0.0",
+    "web-animations-js": "^2.3.1"
+  },
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "wct-browser-legacy": "^1.0.0"
+  }
+}

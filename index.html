@@ -6,7 +6,7 @@
 
     <title>draw war</title>
     <meta name="description" content="this draw app">
-    <script src="/src/nebPay.js" charset="utf-8"></script>
+    <script src="./src/nebPay.js" charset="utf-8"></script>
     <script type="text/javascript">
           var NebPay = require("nebpay");
           var nebPay = new NebPay();
@@ -20,11 +20,9 @@
     <link rel="manifest" href="/manifest.json">
 
     <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="/node_modules/web-animations-js/web-animations-next.min.js"></script>
+    <script src="./node_modules/web-animations-js/web-animations-next.min.js"></script>
 
-    <script type="module" src="./node_modules/@polymer/polymer/lib/elements/custom-style.js"></script>
     <script type="module" src="/src/draw-app/draw-app.js"></script>
-    <custom-style>
       <style>
       body {
         position: absolute;
@@ -35,7 +33,6 @@
         margin: 0;
       }
       </style>
-    </custom-style>
   </head>
   <body>
     <draw-app></draw-app>

@@ -1,14 +1,18 @@
 {
   "entrypoint": "index.html",
   "shell": "src/draw-app/draw-app.js",
+  "fragments": [],
   "sources": [
-        "node_modules/web-animations-js/web-animations-next.min.js",
-        "src/draw-app/draw-app.js",
-        "src/nebPay.js",
-        "manifest/**",
-        "package.json"
+    "node_modules/web-animations-js/web-animations-next.min.js",
+    "src/draw-app/draw-app.js",
+    "src/nebPay.js",
+    "manifest/**",
+    "package.json",
+    "index.html",
+    "src/draw-app/draw-app.js"
   ],
   "extraDependencies": [
+    "bower_components/webcomponentsjs/*.js",
     "manifest.json",
     "node_modules/@webcomponents/webcomponentsjs/*.js",
     "!node_modules/@webcomponents/webcomponentsjs/gulpfile.js",
@@ -34,11 +38,12 @@
       "addServiceWorker": true
     }
   ],
-  "moduleResolution": "node",
-  "npm": true,
   "lint": {
     "rules": [
       "polymer-3"
     ]
-  }
+  },
+  "npm": true,
+  "componentDir": "node_modules/",
+  "moduleResolution": "node"
 }
