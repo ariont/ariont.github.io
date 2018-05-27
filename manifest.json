@@ -1,0 +1,7 @@
+{
+  "name": "draw",
+  "short_name": "draw",
+  "description": "this draw app",
+  "start_url": "/",
+  "display": "standalone"
+}
