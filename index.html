@@ -8,6 +8,13 @@
     <meta name="description" content="this draw app">
     <script src="./src/nebPay.js" charset="utf-8"></script>
     <script type="text/javascript">
+            //检查扩展是否已安装
+            //如果安装了扩展，var“webExtensionWallet”将被注入到web页面中1
+            var isOK = true;
+            if (typeof(webExtensionWallet) === "undefined") {
+                //alert ("扩展钱包未安装，请先安装.")
+                isOK  = false;
+            }
           var NebPay = require("nebpay");
           var nebPay = new NebPay();
           var callbackUrl = NebPay.config.mainnetUrl;

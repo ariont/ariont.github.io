@@ -1,5 +1,6 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 import {GestureEventListeners} from '@polymer/polymer/lib/mixins/gesture-event-listeners.js';
+import {} from '@polymer/polymer/lib/elements/dom-if.js';
 import '@polymer/paper-swatch-picker/paper-swatch-picker.js';
 import '@polymer/paper-dialog/paper-dialog.js';
 import '@polymer/iron-icons/iron-icons.js';
@@ -53,12 +54,19 @@ class DrawApp extends GestureEventListeners(PolymerElement) {
         <div class="header">
         <h1>涂抹战争 </h1>
         <p>涂抹战争是基于区块链的去中心化的策略游戏，你可以在画布上涂抹任意颜色。可以覆盖掉已有颜色。完整所有颜色将胜利。</p>
-      </div>
+        <p> 玩法： 下面画布上的任意点，然后选取颜色。支付矿工费后将可以把颜色永久留在画布上。</p>
+    <div >
+        提示: 请安装
+        <a target="_blank" href="https://github.com/ChengOrangeJu/WebExtensionWallet">WebExtensionWallet</a> 再使用
+    </div>
+    </template>
+      <template is="dom-if" if="[[isOK]]" >
       <div on-tap="getPoint" class="canvas">
       <template is="dom-repeat" items="[[points]]">
           <draw-point point='[[item]]'></draw-point>
       </template>
       </div>
+      </template>
       <div class = "footer">
         power by <a href="https://www.polymer-project.org">polymer </a>
       </div>
@@ -79,6 +87,7 @@ class DrawApp extends GestureEventListeners(PolymerElement) {
   }
 constructor() {
   super();
+    this.isOK = isOK;
   var self = this;
   this.points = [{"x": 10,"y":10,"color": "red"},];
   this. checkPoint = {};
